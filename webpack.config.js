@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
-const mode = process.env.NODE_ENV || 'development';
+const mode = 'production'; // process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
 module.exports = {
@@ -65,7 +65,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
 				exclude: '/images/',
 				use: [
 					{
