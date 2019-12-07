@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html, body {
+    height: 100%;
+    background-color: black;
+}
+
+.header-icon{
+    margin: auto;
+}
+
+.header {
+    background-color: #101417;
+}
+
+.header-title {
+    // text-shadow: -1px 1px rgba(0,0,0, 0.1);
+}
+
+.header h6 {
+    color: rgba(71, 85, 92, 0.8);
+}
+
+.header-content-wrapper {
+
+}
+
+.header-wrapper {
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.001);
+    top: 40%;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    // opacity: 0;
+}
+
+.header-wrapper.animated {
+    //opacity: 100%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.header-container {
+    transition: all .2s ease;
+    max-height: 4999rem
+}
+
+.header-paginate-animate {
+    max-height: 5000rem
+}
+
+.closed-intro {
+    background-color: black;
+}
+
+.loading-modal {
+    transition: opacity 0.25s ease;
+    z-index: 50;
+    background-color: #131519;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    color: #3AC937;
+    border: 1px solid rgba(0,0,0,.07);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 80%;
+}
+
+.loading-modal-container {
+    width: 100%;
+}
+
+#code-text-box {
+    color: transparent;
+    text-shadow: 0 0 0 #cfcfcf;
+}
+
+#code-text-box:focus {
+    outline: none;
+}
+
+span.text-code-keyword {
+     @apply text-code-keyword;
+     text-shadow: 0 0 0 #f92672;
+}
+
+div.terminal-input {
+    color: transparent;
+    text-shadow: 0 0 0 white;
+}
+
+
+.binary-code-background {
+    overflow-wrap: break-word;
+}
+
+span.binary1 {
+    color: #235355;
+}
+
+span.binary2 {
+    color: rgba(35, 83, 84, 0.3);
+}
+
+span.binary3 {
+    color: #329875;
+}
+
+
+#binary-numbers {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-wrapper-bottom {
+    @apply bg-primary w-full justify-center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: 0;
+    left: 0;
+
+}
+.btn {
+    @apply py-2 px-4 rounded font-button text-xs;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-transparent {
+    color: hsl(176, 100%, 85%);
+    text-shadow: -1px 1px 2px rgba(0,0,0, 0.1);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    font-weight: 900;
+    color: hsl(176, 100%, 90%);
+    cursor: pointer;
+}
+
+.header-icon {
+    transition: all .2s ease;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0, 0.3));
+}
+
+.header-icon:hover {
+    transform: scale(1.05);
+}
+
+.contact-icon {
+    transition: all .1s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.05);
+}
+a {
+    transition: color .5s ease;
+}
+
+
