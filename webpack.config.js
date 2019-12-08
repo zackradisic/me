@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
-const mode = 'production'; // process.env.NODE_ENV || 'development';
+const mode = 'development'; // process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
 module.exports = {

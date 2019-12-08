@@ -36,11 +36,12 @@
     }
 
     function handleClick(e) {
-        console.log(contentPage)
         let headerContainer = document.querySelector('.header-container')
         let headerContent = document.querySelector('.header-content-wrapper')
-        headerContainer.style.minHeight = headerContainer.clientHeight + "px"
-        headerContent.style.minHeight = headerContent.clientHeight + "px"
+        if(contentPage == 0) {
+            headerContainer.style.minHeight = headerContainer.clientHeight + "px"
+            headerContent.style.minHeight = headerContent.clientHeight + "px"
+        }
         contentPageStore.set(contentPage ^ 1)
         
     }
@@ -57,7 +58,7 @@
 
             <div class="shadow header-wrapper w-11/12 md:w-1/3 absolute font-thin font-terminal-alt header-container justify-center text-center">
 
-                <div class="relative header-content-wrapper h-full pt-12 pb-8 px-1 md:px-0 z-index-40">
+                <div class="relative header-content-wrapper h-full pt-6 pb-8 px-1 md:px-0 z-index-40">
                     
                     {#if contentPage == 0}
                         <img class="header-icon w-1/4" src="images/macbook_icon.svg">
@@ -77,7 +78,9 @@
 
                 </div>
 
-                <div class="btn-wrapper-bottom py-1 md:py-2">
+                <div style="height: 40px"></div>
+
+                <div class="btn-wrapper-bottom absolute py-1 md:py-2">
                     <a class="btn btn-transparent leading-tight"
                        on:click={handleClick}>
                         {buttonText}

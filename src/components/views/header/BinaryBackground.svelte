@@ -2,8 +2,6 @@
     import { onMount } from 'svelte';
     import paper from 'paper';
 
-    import binaryBackground from './BinaryBackground.html';
-
 
     onMount(() => {
         try {
@@ -22,7 +20,7 @@
                     }
                     paper.view.element.style.opacity = parseFloat(paper.view.element.style.opacity) + .1;
                 }
-                animatePoints(100);
+                animatePoints(paper.animatePointsAmount);
             }
 
         }
@@ -104,7 +102,7 @@
             }
 
         }
-        console.log(count);
+        paper.animatePointsAmount = Math.floor(count * 0.2849002849)
         paper.view.draw();
 
     }
