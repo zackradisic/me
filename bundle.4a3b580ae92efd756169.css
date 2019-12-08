@@ -13836,7 +13836,7 @@ html, body {
           transform: translate(-50%, -50%) scale(.001);
   top: 40%;
   border-radius: 10px;
-  background-color: white;
+  background-color: #fafafa;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   /* opacity: 0;*/
